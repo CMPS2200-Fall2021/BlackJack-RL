@@ -159,7 +159,7 @@ import numpy as np
 '''All players vs Dealer'''
 rewards = [[], [], [], [], []]
 for k in range(0, 10):
-    print "Round", k
+    print("Round", k)
     players = [RandomPlayer(), MonteCarloPlayer(), TDLearningPlayer(), LinFuncApproxPlayer(),
                LinFuncApproxPlayer(use_detailed_features=True), NeuralNetFuncApproxPlayer()]
     player_index = 0
@@ -178,7 +178,7 @@ for k in range(0, 10):
             rewards[player_index].append(player.last_reward > 0)
 
         player_rewards = rewards[player_index][k * 100: (k + 1) * 100]
-        print type(player), "won", sum(player_rewards), "out of", len(player_rewards)
+        print(type(player), "won", sum(player_rewards), "out of", len(player_rewards))
         player_index += 1
     print "\n"
 
@@ -188,6 +188,6 @@ players = [RandomPlayer(), MonteCarloPlayer(), TDLearningPlayer(), LinFuncApprox
 player_index = 0
 for player in players:
     player_rewards = rewards[player_index]
-    print type(player), "won", sum(player_rewards), "out of", len(player_rewards)
-    print "Winning percentage", (sum(player_rewards) * 100. / len(player_rewards)), "%\n"
+    print(type(player), "won", sum(player_rewards), "out of", len(player_rewards))
+    print("Winning percentage", (sum(player_rewards) * 100. / len(player_rewards)), "%\n")
     player_index += 1
