@@ -180,9 +180,9 @@ for k in range(0, 10):
         player_rewards = rewards[player_index][k * 100: (k + 1) * 100]
         print(type(player), "won", sum(player_rewards), "out of", len(player_rewards))
         player_index += 1
-    print "\n"
+    print("\n")
 
-print "Rounds over\n"
+print("Rounds over\n")
 players = [RandomPlayer(), MonteCarloPlayer(), TDLearningPlayer(), LinFuncApproxPlayer(),
            LinFuncApproxPlayer(use_detailed_features=True), NeuralNetFuncApproxPlayer]
 player_index = 0
